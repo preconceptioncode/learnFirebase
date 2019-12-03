@@ -1,22 +1,23 @@
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import './app.css';
-import { FirebaseAppProvider } from 'reactfire';
-import 'firebase/performance';
+import "firebase/performance";
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+import { FirebaseAppProvider } from "reactfire";
+import App from "./App";
+import "./app.css";
+import * as serviceWorker from "./serviceWorker";
 
 const config = {
-  apiKey: 'AIzaSyBg3u1sJlyJwQCE95oSDH_mtLABS-is8ZM',
-  authDomain: 'rxfire-525a3.firebaseapp.com',
-  databaseURL: 'https://rxfire-525a3.firebaseio.com',
-  projectId: 'rxfire-525a3',
-  storageBucket: 'rxfire-525a3.appspot.com',
-  messagingSenderId: '844180061847',
-  appId: '1:844180061847:web:400f7142e2d1aaeb'
+  apiKey: "AIzaSyA-MbWJTNFlkDPDPPGtvyKsbqTYk0d1TaE",
+  authDomain: "learnfirebase-10265.firebaseapp.com",
+  databaseURL: "https://learnfirebase-10265.firebaseio.com",
+  projectId: "learnfirebase-10265",
+  storageBucket: "learnfirebase-10265.appspot.com",
+  messagingSenderId: "723604256172",
+  appId: "1:723604256172:web:56df029d5c6604b9adb609",
+  measurementId: "G-HZJ15K8CPP"
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FirebaseAppProvider firebaseConfig={config} initPerformance>
       <App />
