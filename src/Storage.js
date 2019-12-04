@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   AuthCheck,
-  StorageImage,
   SuspenseWithPerf,
   useStorage,
   useStorageTask
@@ -23,6 +22,7 @@ const ImageUploadButton = props => {
   const [uploadTask, setUploadTask] = useState(null);
   const [ref, setRef] = useState(null);
   const storage = useStorage();
+
   const onChange = event => {
     const fileList = event.target.files;
     const fileToUpload = fileList[0];
@@ -62,11 +62,6 @@ const SuspenseWrapper = props => {
   return (
     <SuspenseWithPerf fallback="loading..." traceId="storage-root">
       <AuthCheck fallback="sign in to use Storage">
-        <StorageImage
-          storagePath="Cloud Storage for Firebase (Independent Icon).png"
-          alt="demo download"
-          style={{ width: "200px", height: "200px" }}
-        />
         <br />
         <ImageUploadButton />
       </AuthCheck>
