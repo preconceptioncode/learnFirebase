@@ -7,19 +7,38 @@ import "./app.css";
 import * as serviceWorker from "./serviceWorker";
 
 const config = {
-  apiKey: "AIzaSyA-MbWJTNFlkDPDPPGtvyKsbqTYk0d1TaE",
-  authDomain: "learnfirebase-10265.firebaseapp.com",
-  databaseURL: "https://learnfirebase-10265.firebaseio.com",
-  projectId: "learnfirebase-10265",
-  storageBucket: "learnfirebase-10265.appspot.com",
-  messagingSenderId: "723604256172",
-  appId: "1:723604256172:web:56df029d5c6604b9adb609",
-  measurementId: "G-HZJ15K8CPP"
+  firebase_config_dev: {
+    apiKey: "AIzaSyDgqoVHCCi3GSMCbXynydkBm08-m7p8Fnk",
+    authDomain: "camply-development.firebaseapp.com",
+    databaseURL: "https://camply-development.firebaseio.com",
+    projectId: "camply-development",
+    storageBucket: "camply-development.appspot.com",
+    messagingSenderId: "377384394659",
+    appId: "1:377384394659:web:d56a10ee500f6f08e64416",
+    measurementId: "G-K4EGPSVWVN"
+  },
+  firebase_config: {
+    apiKey: "AIzaSyBk_s6zTs-Ncyb1IpeM14rvj2S0ZA5Q2uM",
+    authDomain: "camply-production.firebaseapp.com",
+    databaseURL: "https://camply-production.firebaseio.com",
+    projectId: "camply-production",
+    storageBucket: "camply-production.appspot.com",
+    messagingSenderId: "28043108944",
+    appId: "1:28043108944:web:087825a6e9527d56826755",
+    measurementId: "G-2S4RGZSGVK"
+  }
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FirebaseAppProvider firebaseConfig={config} initPerformance>
+    <FirebaseAppProvider
+      firebaseConfig={
+        process.env.NODE_ENV !== "production"
+          ? config.firebase_config_dev
+          : config.firebase_config
+      }
+      initPerformance
+    >
       <App />
     </FirebaseAppProvider>
   </StrictMode>

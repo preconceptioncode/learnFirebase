@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-"use strict";
 
 import * as functions from "firebase-functions";
 
@@ -25,6 +24,6 @@ import * as functions from "firebase-functions";
 //    cd functions
 //    npm run deploy
 
-export = functions.https.onRequest((request, response) => {
+export = functions.https.onRequest((request: any, response: any) => {
   response.send("Hello from New York");
 });

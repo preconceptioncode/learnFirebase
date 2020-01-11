@@ -23,3 +23,5 @@ firebase emulators:start
 ## learn more
 
 https://firebase.google.com/docs/functions/local-emulator
+
+https://stackoverflow.com/questions/43486278/how-do-i-structure-cloud-functions-for-firebase-to-deploy-multiple-functions-fro

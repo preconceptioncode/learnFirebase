@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "learnfirebase-10265"
+    "dev": "camply-development",
+    "prod": "camply-production",
+    "default": "camply-development"
   }
 }
